@@ -2,7 +2,7 @@
 
 This semi-serious module aims to give non-numeric representation to 128 bit identifiers.
 
-Images created so are meant to be more human friendly : they are easier remembered and compared, use less display space, and retain more accurately what an identifier is : a fingerprint.
+Images created so are meant to be more human friendly : they are easier to remember and to compare, use less display space, and retain more accurately what an identifier is : a fingerprint.
 
 To create images that are not complete garbage, the exporter determines a 11 color palette and use them in a 5\*8 image ((5\*8)^11 > 2^128). Then uses symetry to make it 9\*8. 
 
