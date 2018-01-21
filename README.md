@@ -19,12 +19,12 @@ Credits to gixi for the original idea.
 ![example6](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/export5.png)
 
 64 bits examples
-![small1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export0.png)
-![small1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export1.png)
-![small3](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export2.png)
-![small4](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export3.png)
-![small5](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export4.png)
-![small6](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export5.png)
+![small1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/small0.png)
+![small1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/small1.png)
+![small3](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/small2.png)
+![small4](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/small3.png)
+![small5](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/small4.png)
+![small6](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/small5.png)
 
 ## Usage
 
