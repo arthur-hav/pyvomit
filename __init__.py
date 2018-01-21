@@ -21,8 +21,8 @@ def gen_palette (integer):
         10: (compl_hue, 80, 130),
         }
 
-def pyvomit(bigint, name):
-    img = Image.new('HSV', (9, 8), "black")
+
+def _vomit(bigint, img):
     pixels = img.load()
     int_to_clr = gen_palette(bigint)
     for j in range(img.size[1]):
@@ -30,5 +30,19 @@ def pyvomit(bigint, name):
             pixels[i,j] = int_to_clr[bigint % 11]
             pixels[img.size[0] - i - 1,j] = int_to_clr[bigint % 11]
             bigint = bigint // 11
+    if bigint > 0:
+        raise ValueError('Integer too big')
     img = img.resize((img.size[0] * 5,img.size[1] * 5))
+
+def pyvomit128(bigint, name):
+    img = Image.new('HSV', (9, 8), "black")
+    _vomit(bigint, img)
     img.convert('RGB').save(name)
+
+def pyvomit64(bigint, name):
+    img = Image.new('HSV', (7, 5), "black")
+    _vomit(bigint, img)
+    img.convert('RGB').save(name)
+
+for i in range(6):
+    pyvomit64(2**64 - 32, 'small{i}.png'.format(i=i))

@@ -10,12 +10,21 @@ Credits to gixi for the original idea.
 
 ## Example output
 
+128 bits examples
 ![example1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/export0.png)
 ![example1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/export1.png)
 ![example3](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/export2.png)
 ![example4](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/export3.png)
 ![example5](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/export4.png)
 ![example6](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/examples/export5.png)
+
+64 bits examples
+![small1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export0.png)
+![small1](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export1.png)
+![small3](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export2.png)
+![small4](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export3.png)
+![small5](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export4.png)
+![small6](https://raw.githubusercontent.com/arthur-hav/pyvomit/master/smalls/export5.png)
 
 ## Usage
 
