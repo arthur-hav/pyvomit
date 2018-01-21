@@ -30,4 +30,4 @@ Credits to gixi for the original idea.
 
     import pyvomit
     import uuid
-    pyvomit.pyvomit(uuid.uuid4().int, 'path/to/image.png')
+    pyvomit.pyvomit128(uuid.uuid4().int, 'path/to/image.png')
