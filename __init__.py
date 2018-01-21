@@ -28,13 +28,13 @@ def gen_11_palette (integer):
         3: (0, 0, 220),
 
         4: (base_hue, 200, 200),
-        6: (base_hue, 200, 160),
         5: (base_hue, 200, 100),
 
         7: (base_hue, 80, 200),
         8: (base_hue, 80, 130),
 
-        9: (compl_hue, 200, 160),
+        9: (compl_hue, 200, 200),
+        6: (compl_hue, 150, 160),
         10: (compl_hue, 80, 130),
         }
 
@@ -59,7 +59,7 @@ def pyvomit128(bigint, name):
     img.convert('RGB').save(name)
 
 def pyvomit64(bigint, name):
-    img = Image.new('HSV', (7, 6), "black")
+    img = Image.new('HSV', (7, 5), "black")
     pal = gen_8_palette(bigint)
     img = _vomit(bigint // 16, pal, img)
     img.convert('RGB').save(name)
