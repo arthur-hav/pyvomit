@@ -1,7 +1,7 @@
 from PIL import Image
 
 def gen_palette (integer):
-    base_hue = (integer % 256)
+    base_hue = (integer % 128) * 2
     compl_hue = 255 - base_hue
 
     return { 
@@ -25,7 +25,7 @@ def gen_palette (integer):
 def _vomit(bigint, img):
     pixels = img.load()
     int_to_clr = gen_palette(bigint)
-    bigint = bigint // 256
+    bigint = bigint // 128
     for j in range(img.size[1]):
         for i in range((img.size[0] + 1) // 2):
             pixels[i,j] = int_to_clr[bigint % 11]
@@ -51,3 +51,7 @@ def _gen_examples():
         import random
         rng = random.randint(0, 2**128)
         pyvomit128(rng, 'examples/export{i}.png'.format(i=i))
+    for i in range(6):
+        rng = random.randint(0, 2**64)
+        pyvomit64(rng, 'examples/small{i}.png'.format(i=i))
+
