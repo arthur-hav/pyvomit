@@ -1,7 +1,7 @@
 from PIL import Image
 
 def gen_palette (integer):
-    base_hue = (integer % 7) * 32 - 1
+    base_hue = (integer % 256)
     compl_hue = 255 - base_hue
 
     return { 
@@ -25,6 +25,7 @@ def gen_palette (integer):
 def _vomit(bigint, img):
     pixels = img.load()
     int_to_clr = gen_palette(bigint)
+    bigint = bigint // 256
     for j in range(img.size[1]):
         for i in range((img.size[0] + 1) // 2):
             pixels[i,j] = int_to_clr[bigint % 11]
@@ -36,7 +37,7 @@ def _vomit(bigint, img):
     return img
 
 def pyvomit128(bigint, name):
-    img = Image.new('HSV', (9, 8), "black")
+    img = Image.new('HSV', (9, 7), "black")
     img = _vomit(bigint, img)
     img.convert('RGB').save(name)
 
@@ -45,3 +46,8 @@ def pyvomit64(bigint, name):
     img = _vomit(bigint, img)
     img.convert('RGB').save(name)
 
+def _gen_examples():
+    for i in range(6):
+        import random
+        rng = random.randint(0, 2**128)
+        pyvomit128(rng, 'examples/export{i}.png'.format(i=i))
