@@ -44,3 +44,4 @@ def pyvomit64(bigint, name):
     img = Image.new('HSV', (7, 5), "black")
     img = _vomit(bigint, img)
     img.convert('RGB').save(name)
+
