@@ -19,7 +19,7 @@ def gen_8_palette (integer):
 def gen_11_palette (integer):
     base_hue = (integer % 16) * 16
     integer = integer // 8
-    compl_hue = 128 - base_hue + (integer % 8) * 16
+    compl_hue = (base_hue + (integer % 8) * 16) % 255
 
     return { 
         0: (0, 0, 70),
