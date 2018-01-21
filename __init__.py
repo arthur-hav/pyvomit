@@ -23,14 +23,14 @@ def gen_palette (integer):
         }
 
 def pyvomit(myid, name):
-    img = Image.new('HSV', (7, 6), "black")
+    img = Image.new('HSV', (9, 8), "black")
     pixels = img.load()
     bigint = myid.int
     int_to_clr = gen_palette(bigint)
-    for i in range((img.size[0] + 1) // 2):
-        for j in range(img.size[1]):
+    for j in range(img.size[1]):
+        for i in range((img.size[0] + 1) // 2):
             pixels[i,j] = int_to_clr[bigint % 11]
             pixels[img.size[0] - i - 1,j] = int_to_clr[bigint % 11]
             bigint = bigint // 11
-    img = img.resize((35,30))
+    img = img.resize((img.size[0] * 5,img.size[1] * 5))
     img.convert('RGB').save(name)
