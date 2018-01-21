@@ -34,7 +34,3 @@ def pyvomit(myid, name):
             bigint = bigint // 11
     img = img.resize((35,30))
     img.convert('RGB').save(name)
-
-for i in range (10):
-    myid = uuid.uuid4()
-    pyvomit(myid, 'examples/export{i}.png'.format(i=i))
