@@ -20,4 +20,5 @@ Credits to gixi for the original idea.
 ## Usage
 
     import pyvomit
-    pyvomit.pyvomit(uuid.uuid4(), 'path/to/image.png')
+    import uuid
+    pyvomit.pyvomit(uuid.uuid4().int, 'path/to/image.png')

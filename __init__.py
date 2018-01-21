@@ -1,5 +1,4 @@
 from PIL import Image
-import uuid
 
 def gen_palette (integer):
     base_hue = (integer % 7) * 32 - 1
@@ -22,10 +21,9 @@ def gen_palette (integer):
         10: (compl_hue, 80, 130),
         }
 
-def pyvomit(myid, name):
+def pyvomit(bigint, name):
     img = Image.new('HSV', (9, 8), "black")
     pixels = img.load()
-    bigint = myid.int
     int_to_clr = gen_palette(bigint)
     for j in range(img.size[1]):
         for i in range((img.size[0] + 1) // 2):
